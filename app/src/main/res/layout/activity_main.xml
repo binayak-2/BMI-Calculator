@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#233aba"
+        app:titleTextColor="#ffffff"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_alignParentTop="true"
+        >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/main_actionBar"
+        android:id="@+id/main_cardView"
+        android:elevation="4dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:id="@+id/main_heightETin"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_weightET"
+                android:layout_alignEnd="@+id/main_weightET"
+                android:layout_marginStart="-168dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="1dp"
+                android:layout_toEndOf="@+id/main_weightET"
+                android:hint="Height in Inches"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Weight in KG"
+                android:id="@+id/main_weightET"
+                android:layout_alignParentTop="true"
+                android:inputType="numberDecimal"
+                />
+
+            <EditText
+                android:id="@+id/main_heightETft"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_weightET"
+                android:layout_marginTop="15dp"
+                android:hint="Height in Foot"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:layout_below="@id/main_heightETft"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/main_calcBT"
+                android:background="#233aba"
+                android:textColor="#ffffff"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tv"
+                android:layout_below="@id/main_calcBT"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tv2"
+                android:layout_below="@id/main_tv"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
